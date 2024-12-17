@@ -321,7 +321,7 @@ def CC_4():
     print("The quotient of " , number1 , " and " , number2 , " is " , answer4)
 
 def CC_5():
-    print("\nWelcome to the Bank of Capistrano")
+    print("\nWelcome to the Bank of Bajade")
 
     name = input("\nPlease enter your name > ")
 
