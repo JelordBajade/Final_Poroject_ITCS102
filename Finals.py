@@ -1,7 +1,7 @@
 def Act_1(y):
     print(f"Hello World")
 def Act_2():
-    name = input ("jelord")
+    name = input ("Enter a name:")
 
     print ("Hi" + name )
 def Act_3():
