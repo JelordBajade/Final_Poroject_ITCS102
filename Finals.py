@@ -713,7 +713,7 @@ def CC_16():
         else:
             print("Invalid option. Please try again.")
 
-    options()
+        options()
 
 def menu():
     
