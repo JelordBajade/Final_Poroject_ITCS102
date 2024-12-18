@@ -1,4 +1,7 @@
-def Act_1(y):
+import time
+import sys
+import os
+def Act_1():
     print(f"Hello World")
 def Act_2():
     name = input ("Enter a name:")
@@ -713,28 +716,43 @@ def CC_16():
     options()
 
 def menu():
+    
+
+    # Function for the progress bar animation
+    def progress_bar(duration, bar_length=80):
+        for i in range(bar_length + 1):  
+            percent = (i / bar_length) * 100
+            bar = '█' * i + '-' * (bar_length - i)  # Filling the progress bar
+            sys.stdout.write(f'\rLoading: [{bar}] {percent:.0f}%')  # Print progress
+            sys.stdout.flush()  # Update terminal output
+            time.sleep(duration / bar_length)  # Adjust speed based on duration
+        print("\nLoading Complete!")  # Final message after loading completes
+
+    # Call the function
+    progress_bar(3)  # Progress bar runs for 5 seconds
+    os.system('cls')
     tuloy = True
     while tuloy == True:
-        print("\n\t\t\t\t\t_______________________________________________________\n")
+        print("\n\t\t\t\t\t__________________________________________________\n")
         print("\t\t\t\t\t\t\tWelcome to my program! ")
-        print("\n\t\t\t\t\t_______________________________________________________\n")
-        print("\n\t\t\t\t\t_______________________| Activities |__________________\n")
+        print("\n\t\t\t\t\t__________________________________________________\n")
+        print("\n\t\t\t\t\t__________________| Activities |__________________\n")
         print("\t\t\t\t\t|| 1 - Act 1                       14 - Act 14 ||")
         print("\t\t\t\t\t|| 2 - Act 2                       15 - Act 15 ||")
         print("\t\t\t\t\t|| 3 - Act 3                       16 - Act 16 ||")
         print("\t\t\t\t\t|| 4 - Act 4                       17 - Act 17 ||")
         print("\t\t\t\t\t|| 5 - Act 5                       18 - Act 18 ||")
-        print("\t\t\t\t\t|| 6 - Act 6                       19 - Act 19 ||")
+        print("\t\t\t\t\t|| 6 - Act 6      13 - Act 13      19 - Act 19 ||")
         print("\t\t\t\t\t|| 7 - Act 7                       20 - Act 20 ||")
         print("\t\t\t\t\t|| 8 - Act 8                       21 - Act 21 ||")
         print("\t\t\t\t\t|| 9 - Act 9                       22 - Act 22 ||")
         print("\t\t\t\t\t|| 10 - Act 10                     23 - Act 23 ||")
         print("\t\t\t\t\t|| 11 - Act 11                     24 - Act 24 ||")
         print("\t\t\t\t\t|| 12 - Act 12                     25 - Act 25 ||")
-        print("\n\t\t\t\t\t___________________________________________________________\n\n")
+        print("\n\t\t\t\t\t___________________________________________________\n\n")
 
 
-        print("\n\t\t\t\t\t_____________________| Code Challenges |_____________________\n")
+        print("\n\t\t\t\t\t_______________________| Code Challenges |_________________________\n")
         print("\t\t\t\t\t|| CC_1 - Code Challenge 1               CC_9 - Code Challenge 9   ||")
         print("\t\t\t\t\t|| CC_2 - Code Challenge 2               CC_10 - Code Challenge 10 ||")
         print("\t\t\t\t\t|| CC_3 - Code Challenge 3               CC_11 - Code Challenge 11 ||")
@@ -744,15 +762,14 @@ def menu():
         print("\t\t\t\t\t|| CC_7 - Code Challenge 7               CC_15 - Code Challenge 15 ||")
         print("\t\t\t\t\t|| CC_8 - Code Challenge 8               CC_16 - Code Challenge 16 ||")
         print("\n\n\t\t\t\t\t\t\t\t\t\t\t0 - Exit")
-        print("\n\t\t\t\t\t___________________________________________________________\n\n")
+        print("\n\t\t\t\t\t_________________________________________________________________\n\n")
 
         bro = input ("Enter a number:")
         if bro == "Exit" or bro == "0":
             break
         elif bro != "Exit":
             if bro == "1":
-                y = input("Enter your name here:")
-                Act_1 (y)
+                Act_1 ()
                 continue
             elif bro == "2":
                 Act_2()
